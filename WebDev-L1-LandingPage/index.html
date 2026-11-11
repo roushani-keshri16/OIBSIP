@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTech - Next-Generation Cloud Intelligence & AI Infrastructure Platform. Build, deploy, and scale autonomous cloud systems with sub-millisecond latency.">
+  <meta name="keywords" content="NovaTech, cloud infrastructure, artificial intelligence, devops, telemetry, edge computing, autonomous systems">
+  <meta name="author" content="NovaTech Systems">
+  <title>NovaTech — Next-Generation Cloud Intelligence & AI Platform</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans for crisp, modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. STICKY NAVIGATION BAR
+       Pure HTML5 & CSS3: Uses CSS checkbox hack for zero-JS mobile responsive menu
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <!-- Brand Logo & Name -->
+      <a href="#hero" class="brand-logo" aria-label="NovaTech Homepage">
+        <svg class="logo-icon" viewBox="0 0 40 40" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#6366F1" />
+              <stop offset="50%" stop-color="#8B5CF6" />
+              <stop offset="100%" stop-color="#06B6D4" />
+            </linearGradient>
+          </defs>
+          <rect width="40" height="40" rx="10" fill="#131B2E" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+          <path d="M12 28L20 12L28 28H23L20 22L17 28H12Z" fill="url(#logoGrad)" />
+          <circle cx="20" cy="18" r="3" fill="#38BDF8" />
+        </svg>
+        <span class="brand-text">Nova<span class="gradient-text">Tech</span></span>
+      </a>
+
+      <!-- Pure CSS Mobile Menu Checkbox & Accessible Label Toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Menu">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open Navigation Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </label>
+
+      <!-- Navigation Menu Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Navigation Action Buttons -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-secondary btn-sm">Sign In</a>
+          <a href="#pricing" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT WRAPPER
+       ========================================================================= -->
+  <main>
+
+    <!-- =========================================================================
+         2. HERO SECTION
+         Headline, Subheadline, Dual CTA, Social Proof Stats & Simulated Live Dashboard
+         ========================================================================= -->
+    <section id="hero" class="hero-section">
+      <!-- Background Ambient Glow Accents -->
+      <div class="ambient-glow glow-top" aria-hidden="true"></div>
+      <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Hero Content Column -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">NovaTech 3.0 is Live &bull; Autonomous Cloud Engine</span>
+          </div>
+
+          <h1 class="hero-title">
+            Architect the <span class="gradient-text">Autonomous Enterprise</span> with Next-Gen Intelligence
+          </h1>
+
+          <p class="hero-subtitle">
+            NovaTech unifies multi-cloud infrastructure orchestration, predictive analytics, and real-time AI workflows into one seamless, enterprise-grade cloud platform. Built for engineering teams that refuse to compromise.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#pricing" class="btn btn-primary btn-lg">
+              <span>Start Free 14-Day Trial</span>
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#solutions" class="btn btn-secondary btn-lg">
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
+              </svg>
+              <span>Explore Platform Tour</span>
+            </a>
+          </div>
+
+          <!-- Quick Trust Highlights -->
+          <div class="hero-trust">
+            <div class="trust-item">
+              <svg class="trust-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>No credit card required</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>5-minute instant setup</span>
+            </div>
+            <div class="trust-item">
+              <svg class="trust-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>SOC2 Type II Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Graphic: Pure CSS/SVG Simulated Telemetry & Infrastructure Console -->
+        <div class="hero-visual">
+          <div class="console-card">
+            <div class="console-header">
+              <div class="console-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="console-title">novatech-cluster-iad1.prod &mdash; Telemetry Console</div>
+              <span class="console-status"><span class="pulse-indicator"></span> Optimal</span>
+            </div>
+
+            <div class="console-body">
+              <div class="metric-row">
+                <div class="metric-box">
+                  <div class="metric-label">GLOBAL LATENCY</div>
+                  <div class="metric-value">11.4 <span class="metric-unit">ms</span></div>
+                  <div class="metric-trend text-green">&darr; 38% vs baseline</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">THROUGHPUT</div>
+                  <div class="metric-value">482 <span class="metric-unit">k req/s</span></div>
+                  <div class="metric-trend text-blue">&uarr; 99.999% uptime</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">ACTIVE PODS</div>
+                  <div class="metric-value">1,420</div>
+                  <div class="metric-trend text-indigo">Auto-balanced</div>
+                </div>
+              </div>
+
+              <!-- Visual Live Waveform Graph -->
+              <div class="console-graph">
+                <div class="graph-header">
+                  <span>Distributed Neural Mesh Load (Last 60 Minutes)</span>
+                  <span class="graph-tag">Real-time Stream</span>
+                </div>
+                <div class="graph-bars">
+                  <div class="bar bar-1"></div>
+                  <div class="bar bar-2"></div>
+                  <div class="bar bar-3"></div>
+                  <div class="bar bar-4"></div>
+                  <div class="bar bar-5"></div>
+                  <div class="bar bar-6"></div>
+                  <div class="bar bar-7"></div>
+                  <div class="bar bar-8"></div>
+                  <div class="bar bar-9"></div>
+                  <div class="bar bar-10"></div>
+                  <div class="bar bar-11"></div>
+                  <div class="bar bar-12"></div>
+                  <div class="bar bar-13"></div>
+                  <div class="bar bar-14"></div>
+                  <div class="bar bar-15"></div>
+                  <div class="bar bar-16"></div>
+                </div>
+              </div>
+
+              <!-- Terminal Command Stream -->
+              <div class="terminal-log">
+                <div class="log-line"><span class="log-prompt">$</span> novatech deploy --mesh global-edge --autopilot</div>
+                <div class="log-line text-green"><span class="log-check">&#10003;</span> 140+ edge regions synced in 820ms</div>
+                <div class="log-line text-cyan"><span class="log-arrow">&rarr;</span> Autonomous AI routing active: 0 anomalies detected</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Global Metrics Strip -->
+      <div class="hero-stats-strip">
+        <div class="container stats-container">
+          <div class="stat-cell">
+            <div class="stat-number">99.999%</div>
+            <div class="stat-label">SLA Guaranteed Uptime</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-number">&lt; 12ms</div>
+            <div class="stat-label">Global Edge Latency</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-number">450M+</div>
+            <div class="stat-label">Daily Ingested Events</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-number">8,500+</div>
+            <div class="stat-label">Production Clusters</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TRUSTED ENTERPRISES TICKER / LOGOS
+         ========================================================================= -->
+    <section class="partners-section" aria-label="Trusted Partners">
+      <div class="container">
+        <p class="partners-caption">POWERING MISSION-CRITICAL INFRASTRUCTURE FOR MODERN TECH LEADERS</p>
+        <div class="partners-grid">
+          <div class="partner-badge"><span>VERTEX LABS</span></div>
+          <div class="partner-badge"><span>HYPERION CLOUD</span></div>
+          <div class="partner-badge"><span>PULSE DYNAMICS</span></div>
+          <div class="partner-badge"><span>SYNTHETIX AI</span></div>
+          <div class="partner-badge"><span>CYBERSPHERE</span></div>
+          <div class="partner-badge"><span>APEX STREAM</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. CONTENT SECTION 1: CORE FEATURES
+         6 High-Impact Feature Cards in a Responsive Flex/Grid Layout
+         ========================================================================= -->
+    <section id="features" class="section features-section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">CORE CAPABILITIES</span>
+          <h2 class="section-title">Engineered for Extreme Speed and High Resilience</h2>
+          <p class="section-description">
+            NovaTech replaces fragmented tools with an interconnected fabric designed for modern software teams navigating complex multi-cloud ecosystems.
+          </p>
+        </header>
+
+        <div class="features-grid">
+          <!-- Feature Card 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Autonomous Cloud Mesh</h3>
+            <p class="feature-text">
+              Zero-configuration container routing across multi-cloud clusters. Dynamic workload balancing optimizes server utilization and slashes compute costs up to 45%.
+            </p>
+            <span class="feature-badge">Zero Config</span>
+          </article>
+
+          <!-- Feature Card 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Edge Neural Processing</h3>
+            <p class="feature-text">
+              Run real-time LLM inferences and micro-models at the network edge with sub-15ms latency across 140+ global points of presence without spinning dedicated GPUs.
+            </p>
+            <span class="feature-badge">Sub-15ms</span>
+          </article>
+
+          <!-- Feature Card 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 14 14" />
+                <path d="M16.24 7.76a6 6 0 1 0 0 8.49" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Predictive Observability</h3>
+            <p class="feature-text">
+              Continuous trace and telemetry analysis detects regressions, memory degradation, and cascade failures minutes before they impact end-user customer workflows.
+            </p>
+            <span class="feature-badge">AI Root-Cause</span>
+          </article>
+
+          <!-- Feature Card 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Zero-Trust Cryptographic Guard</h3>
+            <p class="feature-text">
+              Automated mTLS, ephemeral role-based tokens, hardware security module (HSM) attestation, and continuous compliance verification built into every request packet.
+            </p>
+            <span class="feature-badge">FIPS 140-3</span>
+          </article>
+
+          <!-- Feature Card 5 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Declarative Infrastructure as Code</h3>
+            <p class="feature-text">
+              Define your entire infrastructure topology in simple declarative manifests. Version control configurations, orchestrate rollouts, and automate rollback instantly.
+            </p>
+            <span class="feature-badge">GitOps Native</span>
+          </article>
+
+          <!-- Feature Card 6 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Universal SDKs &amp; gRPC Streams</h3>
+            <p class="feature-text">
+              First-class developer kits for TypeScript, Go, Python, Rust, and Java. Binary streaming payloads ensure blazing serialization speed across distributed microservices.
+            </p>
+            <span class="feature-badge">Multi-Language</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. CONTENT SECTION 2: ABOUT NOVATECH
+         Mission, Story, Strategic Values, and Bento Metric Grid
+         ========================================================================= -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Column: Story & Vision -->
+          <div class="about-story">
+            <span class="section-tag">WHO WE ARE</span>
+            <h2 class="section-title">Pioneering the Next Era of Distributed Computing</h2>
+            <p class="about-lead">
+              Founded in 2022 by distributed systems architects and machine learning researchers, NovaTech was created to eliminate the friction between infrastructure operations and rapid application delivery.
+            </p>
+            <p class="about-paragraph">
+              Modern cloud architectures have become impossibly fragmented: dozens of dashboards, siloed metric stores, and constant alert fatigue. We designed NovaTech to be the singular intelligent fabric that connects your cloud environments, learns your traffic patterns, and automatically heals degraded nodes.
+            </p>
+
+            <div class="values-list">
+              <div class="value-item">
+                <div class="value-bullet"></div>
+                <div>
+                  <h4 class="value-name">Autonomous Resilience</h4>
+                  <p class="value-desc">Systems should self-heal before humans ever receive a pager alert.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-bullet"></div>
+                <div>
+                  <h4 class="value-name">Radical Transparency</h4>
+                  <p class="value-desc">Every routing choice and auto-scale event is verifiable through open audit logs.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <div class="value-bullet"></div>
+                <div>
+                  <h4 class="value-name">Developer First</h4>
+                  <p class="value-desc">Zero bloat, instant local emulators, and uncompromising CLI responsiveness.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta-wrapper">
+              <a href="#contact" class="btn btn-primary">Join the NovaTech Community &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Bento Grid Showcase -->
+          <div class="about-bento">
+            <div class="bento-card bento-stat">
+              <div class="bento-number gradient-text">10,000+</div>
+              <div class="bento-title">Active Engineering Teams</div>
+              <p class="bento-desc">From fast-growing YC startups to Fortune 100 enterprise leaders.</p>
+            </div>
+
+            <div class="bento-card bento-quote">
+              <div class="quote-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="bento-quote-text">
+                &ldquo;NovaTech replaced 6 separate monitoring and orchestration layers. Our MTTR dropped by 74% in month one.&rdquo;
+              </blockquote>
+              <div class="bento-author">
+                <div class="bento-avatar-initials">DK</div>
+                <div>
+                  <div class="author-name">David Kovic</div>
+                  <div class="author-role">Head of Cloud at VectorScale</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card bento-cert">
+              <div class="cert-icons">
+                <span class="cert-pill">SOC-2 TYPE II</span>
+                <span class="cert-pill">ISO 27001</span>
+                <span class="cert-pill">HIPAA READY</span>
+                <span class="cert-pill">GDPR COMPLIANT</span>
+              </div>
+              <div class="bento-title">Enterprise Security First</div>
+              <p class="bento-desc">Independently audited banking-grade security architecture updated continuously.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CONTENT SECTION 3: SOLUTIONS / PLATFORM ARCHITECTURE
+         Three Specialized Workflows with Visual Step Cards
+         ========================================================================= -->
+    <section id="solutions" class="section solutions-section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">TAILORED SOLUTIONS</span>
+          <h2 class="section-title">Built for Every Tier of Your Engineering Stack</h2>
+          <p class="section-description">
+            Whether you are deploying mission-critical fintech APIs or processing high-volume computer vision models, NovaTech adapts to your exact operational demands.
+          </p>
+        </header>
+
+        <div class="solutions-grid">
+          <!-- Solution 1 -->
+          <article class="solution-card">
+            <div class="solution-badge">Cloud Engineering</div>
+            <h3 class="solution-heading">Multi-Cloud Federation</h3>
+            <p class="solution-body">
+              Seamlessly unify AWS, Google Cloud, Azure, and private on-prem bare-metal clusters under one single pane of glass without vendor lock-in.
+            </p>
+            <ul class="solution-points">
+              <li>Cross-provider failover in &lt; 2 seconds</li>
+              <li>Unified secret &amp; IAM policy synchronization</li>
+              <li>Global egress traffic fee optimization</li>
+            </ul>
+            <a href="#pricing" class="solution-link">Explore Federation Specs &rarr;</a>
+          </article>
+
+          <!-- Solution 2 -->
+          <article class="solution-card solution-highlighted">
+            <div class="solution-badge badge-popular">AI &amp; Data Teams</div>
+            <h3 class="solution-heading">Predictive AI Workflows</h3>
+            <p class="solution-body">
+              Spin dynamic ephemeral GPU environments for training and fine-tuning. Automatically scale inference nodes down to zero when idle to conserve capital.
+            </p>
+            <ul class="solution-points">
+              <li>Warm-start container inference in 120ms</li>
+              <li>Integrated vector database acceleration</li>
+              <li>Automated token usage budgeting &amp; alerts</li>
+            </ul>
+            <a href="#pricing" class="solution-link">Explore AI Pipelines &rarr;</a>
+          </article>
+
+          <!-- Solution 3 -->
+          <article class="solution-card">
+            <div class="solution-badge">SecOps &amp; Compliance</div>
+            <h3 class="solution-heading">Continuous Compliance &amp; Audit</h3>
+            <p class="solution-body">
+              Automated policy-as-code guarantees that every pull request adheres to regional data residency rules, encryption standards, and least-privilege principles.
+            </p>
+            <ul class="solution-points">
+              <li>Real-time vulnerability &amp; CVE scans</li>
+              <li>Automated evidence export for auditors</li>
+              <li>Immutable cryptographic audit trail</li>
+            </ul>
+            <a href="#pricing" class="solution-link">Explore Security Fabric &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. CONTENT SECTION 4: TESTIMONIALS
+         Authentic Feedback from Industry Leaders
+         ========================================================================= -->
+    <section id="testimonials" class="section testimonials-section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">CUSTOMER VALIDATION</span>
+          <h2 class="section-title">Trusted by Engineering Leaders Worldwide</h2>
+          <p class="section-description">
+            See how top technology companies rely on NovaTech to maintain flawless uptime and accelerate deployment velocity.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <figure class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              &ldquo;Migrating our core payment processing architecture to NovaTech cut our p99 response times from 180ms to 24ms. The autonomous failover has saved us from at least three regional cloud blackouts this year alone.&rdquo;
+            </blockquote>
+            <figcaption class="testimonial-author">
+              <div class="author-avatar avatar-1">ER</div>
+              <div class="author-info">
+                <strong class="author-name">Elena Rostova</strong>
+                <span class="author-title">Chief Technology Officer &bull; Orbital Dynamics</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- Testimonial 2 -->
+          <figure class="testimonial-card testimonial-featured">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              &ldquo;The sheer ergonomics of NovaTech are unbelievable. Our DevOps team stopped writing repetitive Kubernetes boilerplate and now spends time delivering revenue-generating features. It is a genuine 10x multiplier.&rdquo;
+            </blockquote>
+            <figcaption class="testimonial-author">
+              <div class="author-avatar avatar-2">MV</div>
+              <div class="author-info">
+                <strong class="author-name">Marcus Vance</strong>
+                <span class="author-title">VP of Systems Engineering &bull; Quantico Data</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- Testimonial 3 -->
+          <figure class="testimonial-card">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              &ldquo;As a fast-growing AI startup handling billions of tokens a day, latency and GPU cost efficiency are everything. NovaTech gave us enterprise-grade observability from day one without hiring a dedicated platform team.&rdquo;
+            </blockquote>
+            <figcaption class="testimonial-author">
+              <div class="author-avatar avatar-3">SC</div>
+              <div class="author-info">
+                <strong class="author-name">Sarah Chen</strong>
+                <span class="author-title">Co-Founder &amp; CEO &bull; NexaSphere AI</span>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. CONTENT SECTION 5: PRICING PLANS
+         Transparent, Scalable Options for Teams of All Sizes
+         ========================================================================= -->
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">TRANSPARENT TIERS</span>
+          <h2 class="section-title">Predictable Pricing for Rapid Scale</h2>
+          <p class="section-description">
+            Start free, scale on demand, and never worry about surprise cloud egress bills. Every plan includes our 99.999% SLA.
+          </p>
+        </header>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: Starter -->
+          <article class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="tier-name">Developer</h3>
+              <p class="tier-tagline">Ideal for pilots, side projects, and small development teams.</p>
+              <div class="price-wrapper">
+                <span class="currency">$</span>
+                <span class="amount">29</span>
+                <span class="period">/ month</span>
+              </div>
+            </div>
+
+            <ul class="tier-features">
+              <li><span class="feature-check">&#10003;</span> Up to 5 Active Clusters</li>
+              <li><span class="feature-check">&#10003;</span> 50GB Telemetry Ingestion</li>
+              <li><span class="feature-check">&#10003;</span> Community Slack Support</li>
+              <li><span class="feature-check">&#10003;</span> 7-Day Metric Retention</li>
+              <li class="feature-disabled"><span class="feature-cross">&times;</span> Multi-Cloud Failover</li>
+              <li class="feature-disabled"><span class="feature-cross">&times;</span> Dedicated TAM</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-secondary btn-full">Start 14-Day Trial</a>
+          </article>
+
+          <!-- Tier 2: Professional (Featured) -->
+          <article class="pricing-card pricing-card-featured">
+            <div class="popular-ribbon">MOST POPULAR</div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Professional</h3>
+              <p class="tier-tagline">Engineered for fast-growing scaleups with production loads.</p>
+              <div class="price-wrapper">
+                <span class="currency">$</span>
+                <span class="amount">99</span>
+                <span class="period">/ month</span>
+              </div>
+            </div>
+
+            <ul class="tier-features">
+              <li><span class="feature-check">&#10003;</span> Unlimited Clusters &amp; Nodes</li>
+              <li><span class="feature-check">&#10003;</span> 500GB Telemetry Ingestion</li>
+              <li><span class="feature-check">&#10003;</span> Autonomous Multi-Cloud Failover</li>
+              <li><span class="feature-check">&#10003;</span> 90-Day Metric Retention</li>
+              <li><span class="feature-check">&#10003;</span> 24/7 Priority Support (1hr SLA)</li>
+              <li class="feature-disabled"><span class="feature-cross">&times;</span> Dedicated Private HSM</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary btn-full">Deploy Professional</a>
+          </article>
+
+          <!-- Tier 3: Enterprise -->
+          <article class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="tier-name">Enterprise</h3>
+              <p class="tier-tagline">Custom architecture, custom compliance, and dedicated engineering support.</p>
+              <div class="price-wrapper">
+                <span class="currency">$</span>
+                <span class="amount">299</span>
+                <span class="period">/ month</span>
+              </div>
+            </div>
+
+            <ul class="tier-features">
+              <li><span class="feature-check">&#10003;</span> Everything in Professional</li>
+              <li><span class="feature-check">&#10003;</span> Multi-Petabyte Custom Ingestion</li>
+              <li><span class="feature-check">&#10003;</span> Custom On-Prem / Hybrid Mesh</li>
+              <li><span class="feature-check">&#10003;</span> Dedicated Solutions Architect</li>
+              <li><span class="feature-check">&#10003;</span> 99.999% Financially-Backed SLA</li>
+              <li><span class="feature-check">&#10003;</span> Custom Security Review &amp; BAA</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-secondary btn-full">Contact Enterprise Team</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. CONTENT SECTION 6: FAQ ACCORDION (100% PURE HTML5 & CSS3)
+         Uses native <details> and <summary> tags for accessible zero-JS accordions
+         ========================================================================= -->
+    <section id="faq" class="section faq-section">
+      <div class="container faq-container">
+        <header class="section-header">
+          <span class="section-tag">FREQUENT QUESTIONS</span>
+          <h2 class="section-title">Everything You Need to Know</h2>
+          <p class="section-description">
+            Clear, honest answers about architecture, migration, and billing.
+          </p>
+        </header>
+
+        <div class="faq-list">
+          <!-- FAQ Item 1 -->
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>How does NovaTech connect to existing AWS, GCP, or Azure clusters?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                NovaTech deploys an ultra-lightweight, Rust-based eBPF agent into your existing Kubernetes or Linux hosts via a single declarative Helm command or Terraform module. It operates non-intrusively in user-space with near-zero overhead (&lt; 0.5% CPU and 25MB RAM).
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 2 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Will our proprietary source code or data payloads ever leave our network?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                No. NovaTech’s hybrid architecture separates the control plane from the data plane. Your raw application payloads and data streams stay inside your isolated VPC. Only anonymized telemetry metadata (latency, error codes, and mesh topology) is transmitted to orchestrate routing.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Can I test NovaTech without altering our production traffic?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Yes. NovaTech supports a pure &ldquo;Shadow Mode&rdquo; that mirrors incoming traffic asynchronously to evaluate routing predictions and performance gains with 0% risk to production users.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 4 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What happens if an outage affects NovaTech’s own control plane?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                All local mesh agents run an autonomous decentralized cache. If communication with the NovaTech global control plane is ever interrupted, your existing infrastructure continues operating at last-known optimal configuration with zero service downtime.
+              </p>
+            </div>
+          </details>
+
+          <!-- FAQ Item 5 -->
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How does the 14-day free trial work?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                You gain immediate access to all Professional tier features for 14 days without entering credit card information. If you decide not to upgrade at the end of the trial, your account automatically transfers to our free community tier.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. CALL TO ACTION & NEWSLETTER BANNER
+         ========================================================================= -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-banner-content">
+            <h2 class="cta-banner-title">Ready to Transform Your Cloud Infrastructure?</h2>
+            <p class="cta-banner-text">
+              Join more than 10,000 developers and systems engineers building resilient, autonomous applications with NovaTech. Set up your first cluster in under five minutes.
+            </p>
+            <form class="cta-subscribe-form" action="#contact" method="GET">
+              <label for="subscriber-email" class="visually-hidden">Your Work Email</label>
+              <input type="email" id="subscriber-email" class="cta-input" placeholder="Enter your work email..." required>
+              <button type="submit" class="btn btn-primary cta-btn">Get Started Free</button>
+            </form>
+            <p class="cta-subtext">Free 14-day trial &bull; Instant activation &bull; Cancel anytime</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER WITH CONTACT INFO & SOCIAL LINKS
+       Full semantic layout with address, quick links, newsletter, and social media
+       ========================================================================= -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-container">
+      <!-- Footer Col 1: Brand & Bio -->
+      <div class="footer-col footer-col-brand">
+        <a href="#hero" class="brand-logo footer-logo" aria-label="NovaTech Homepage">
+          <svg class="logo-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="10" fill="#131B2E" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+            <path d="M12 28L20 12L28 28H23L20 22L17 28H12Z" fill="url(#logoGrad)" />
+            <circle cx="20" cy="18" r="3" fill="#38BDF8" />
+          </svg>
+          <span class="brand-text">Nova<span class="gradient-text">Tech</span></span>
+        </a>
+        <p class="footer-bio">
+          Next-generation autonomous cloud intelligence and multi-cloud orchestration. Powering resilient software systems worldwide.
+        </p>
+
+        <!-- Social Links (Pure HTML/CSS with Accessible SVG Icons) -->
+        <div class="social-links" aria-label="NovaTech Social Media Links">
+          <!-- GitHub -->
+          <a href="https://github.com" class="social-icon" aria-label="NovaTech on GitHub" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <!-- Twitter / X -->
+          <a href="https://twitter.com" class="social-icon" aria-label="NovaTech on X (Twitter)" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" class="social-icon" aria-label="NovaTech on LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <!-- Discord -->
+          <a href="https://discord.com" class="social-icon" aria-label="NovaTech Community on Discord" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Col 2: Navigation Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="#features">Autonomous Mesh</a></li>
+          <li><a href="#solutions">Edge Inference</a></li>
+          <li><a href="#solutions">Observability Engine</a></li>
+          <li><a href="#pricing">Pricing Plans</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+          <li><a href="#hero">System Status (99.999%)</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3: Company Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Company</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About NovaTech</a></li>
+          <li><a href="#testimonials">Customer Stories</a></li>
+          <li><a href="#about">Careers <span class="badge-hiring">We're Hiring</span></a></li>
+          <li><a href="#contact">Press &amp; Media Kit</a></li>
+          <li><a href="#contact">Security &amp; Trust Center</a></li>
+          <li><a href="#contact">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 4: Contact & Office Info -->
+      <div class="footer-col footer-col-contact">
+        <h4 class="footer-heading">Get in Touch</h4>
+        <address class="footer-address">
+          <p class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>500 Howard Street, Suite 400<br>San Francisco, CA 94105</span>
+          </p>
+          <p class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:contact@novatech.io">contact@novatech.io</a>
+          </p>
+          <p class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <a href="tel:+18005556682">+1 (800) 555-NOVA</a>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright & Back-to-Top Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright-text">
+          &copy; 2026 NovaTech Systems, Inc. All rights reserved. Built with semantic HTML5 &amp; CSS3.
+        </p>
+        <div class="footer-legal-links">
+          <a href="#contact">Terms of Service</a>
+          <span class="divider">&bull;</span>
+          <a href="#contact">Privacy Notice</a>
+          <span class="divider">&bull;</span>
+          <a href="#contact">Cookie Preferences</a>
+          <span class="divider">&bull;</span>
+          <a href="#hero" class="back-to-top" aria-label="Back to top of page">
+            <span>Back to top</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="19" x2="12" y2="5" />
+              <polyline points="5 12 12 5 19 12" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

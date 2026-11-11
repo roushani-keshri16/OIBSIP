@@ -1,0 +1,11 @@
+{
+  "name": "pizza-delivery-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd pizza-delivery-app/backend && npm install && cd ../frontend && npm install",
+    "backend": "cd pizza-delivery-app/backend && npm run dev",
+    "frontend": "cd pizza-delivery-app/frontend && npm run dev",
+    "seed": "cd pizza-delivery-app/backend && npm run seed"
+  }
+}

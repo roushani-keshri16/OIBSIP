@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fast, accurate, and responsive Temperature Converter between Celsius, Fahrenheit, and Kelvin with absolute zero validation.">
+  <title>Temperature Converter | Celsius, Fahrenheit & Kelvin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme Toggle in top header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-area">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+          </svg>
+        </span>
+        <div>
+          <h1 class="app-title">TempScope</h1>
+          <p class="app-subtitle">Precision Temperature Converter</p>
+        </div>
+      </div>
+      <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark and light theme" title="Toggle Theme">
+        <svg id="themeIconSun" class="theme-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg id="themeIconMoon" class="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    <div class="converter-card">
+      <div class="card-intro">
+        <h2>Convert Any Temperature</h2>
+        <p>Enter any value, pick your scale, and see simultaneous conversions across Celsius, Fahrenheit, and Kelvin.</p>
+      </div>
+
+      <!-- Temperature Input Form -->
+      <form id="tempForm" class="converter-form" novalidate>
+        <!-- Form Controls Grid -->
+        <div class="form-grid">
+          <!-- Numeric Temperature Input Field -->
+          <div class="form-group">
+            <label for="tempInput" class="form-label">
+              <span>Temperature Value</span>
+              <span class="required-indicator" aria-hidden="true">*</span>
+            </label>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                id="tempInput"
+                name="temperature"
+                class="form-input"
+                placeholder="e.g. 25 or -10.5"
+                autocomplete="off"
+                inputmode="decimal"
+                aria-describedby="errorMessage"
+                required
+              >
+              <button type="button" id="clearInputBtn" class="clear-input-btn hidden" aria-label="Clear temperature input" title="Clear input">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Input Unit Selector Dropdown -->
+          <div class="form-group">
+            <label for="unitSelect" class="form-label">
+              <span>From Unit</span>
+              <span class="required-indicator" aria-hidden="true">*</span>
+            </label>
+            <div class="select-wrapper">
+              <select id="unitSelect" name="unit" class="form-select" aria-label="Select temperature unit">
+                <option value="celsius" selected>Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
+              </select>
+              <span class="select-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Scientific Presets for Easy Testing -->
+        <div class="presets-section">
+          <span class="presets-label">Quick Presets:</span>
+          <div class="presets-list" role="group" aria-label="Quick temperature presets">
+            <button type="button" class="preset-chip" data-temp="-273.15" data-unit="celsius" title="Absolute Zero in Celsius">Absolute Zero</button>
+            <button type="button" class="preset-chip" data-temp="0" data-unit="celsius" title="Freezing Point of Water">Freezing (0°C)</button>
+            <button type="button" class="preset-chip" data-temp="21" data-unit="celsius" title="Standard Room Temperature">Room Temp (21°C)</button>
+            <button type="button" class="preset-chip" data-temp="37" data-unit="celsius" title="Normal Human Body Temperature">Body Temp (37°C)</button>
+            <button type="button" class="preset-chip" data-temp="100" data-unit="celsius" title="Boiling Point of Water">Boiling (100°C)</button>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button type="submit" id="convertBtn" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+            <span>Convert</span>
+          </button>
+          <button type="button" id="resetBtn" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+              <path d="M3 3v5h5"></path>
+            </svg>
+            <span>Reset</span>
+          </button>
+        </div>
+
+        <!-- Friendly Validation Error Display Box -->
+        <div id="errorMessage" class="error-banner hidden" role="alert" aria-live="assertive">
+          <span class="error-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </span>
+          <div class="error-text-group">
+            <strong class="error-title">Validation Notice:</strong>
+            <span id="errorText" class="error-description"></span>
+          </div>
+        </div>
+      </form>
+
+      <!-- Results Display Section showing all 3 units simultaneously -->
+      <section id="resultsSection" class="results-container" aria-label="Converted Temperature Results">
+        <div class="results-header">
+          <div class="results-title-group">
+            <h3 class="results-title">Simultaneous Conversions</h3>
+            <span id="inputEchoBadge" class="input-echo-badge">Awaiting calculation</span>
+          </div>
+          <!-- Thermal description tag -->
+          <div id="thermalStatus" class="thermal-status-tag hidden" aria-live="polite">
+            <span id="thermalIcon">🌡️</span>
+            <span id="thermalLabel">Normal</span>
+          </div>
+        </div>
+
+        <!-- Three Unit Result Cards -->
+        <div class="cards-grid">
+          <!-- Celsius Card -->
+          <article class="unit-card" id="cardCelsius" data-unit="celsius">
+            <div class="card-top">
+              <span class="card-unit-name">Celsius</span>
+              <span class="card-badge" id="badgeCelsius">Output</span>
+            </div>
+            <div class="card-value-display">
+              <span class="card-number" id="celsiusValue">--</span>
+              <span class="card-symbol">°C</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-formula" id="celsiusFormula">Formula reference</span>
+              <button type="button" class="copy-btn" data-target="celsiusValue" aria-label="Copy Celsius result" title="Copy value">
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-tooltip">Copied!</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Fahrenheit Card -->
+          <article class="unit-card" id="cardFahrenheit" data-unit="fahrenheit">
+            <div class="card-top">
+              <span class="card-unit-name">Fahrenheit</span>
+              <span class="card-badge" id="badgeFahrenheit">Output</span>
+            </div>
+            <div class="card-value-display">
+              <span class="card-number" id="fahrenheitValue">--</span>
+              <span class="card-symbol">°F</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-formula" id="fahrenheitFormula">Formula reference</span>
+              <button type="button" class="copy-btn" data-target="fahrenheitValue" aria-label="Copy Fahrenheit result" title="Copy value">
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-tooltip">Copied!</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Kelvin Card -->
+          <article class="unit-card" id="cardKelvin" data-unit="kelvin">
+            <div class="card-top">
+              <span class="card-unit-name">Kelvin</span>
+              <span class="card-badge" id="badgeKelvin">Output</span>
+            </div>
+            <div class="card-value-display">
+              <span class="card-number" id="kelvinValue">--</span>
+              <span class="card-symbol">K</span>
+            </div>
+            <div class="card-footer">
+              <span class="card-formula" id="kelvinFormula">Formula reference</span>
+              <button type="button" class="copy-btn" data-target="kelvinValue" aria-label="Copy Kelvin result" title="Copy value">
+                <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-tooltip">Copied!</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Formula reference drawer -->
+        <details class="formula-details">
+          <summary class="formula-summary">
+            <span>View Scientific Conversion Formulas & Limits</span>
+            <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="formula-content">
+            <div class="formula-grid">
+              <div class="formula-item">
+                <h4>From Celsius (°C)</h4>
+                <ul>
+                  <li><strong>To Fahrenheit:</strong> °F = (°C × 9/5) + 32</li>
+                  <li><strong>To Kelvin:</strong> K = °C + 273.15</li>
+                  <li><strong>Absolute Zero:</strong> -273.15 °C</li>
+                </ul>
+              </div>
+              <div class="formula-item">
+                <h4>From Fahrenheit (°F)</h4>
+                <ul>
+                  <li><strong>To Celsius:</strong> °C = (°F - 32) × 5/9</li>
+                  <li><strong>To Kelvin:</strong> K = (°F - 32) × 5/9 + 273.15</li>
+                  <li><strong>Absolute Zero:</strong> -459.67 °F</li>
+                </ul>
+              </div>
+              <div class="formula-item">
+                <h4>From Kelvin (K)</h4>
+                <ul>
+                  <li><strong>To Celsius:</strong> °C = K - 273.15</li>
+                  <li><strong>To Fahrenheit:</strong> °F = (K - 273.15) × 9/5 + 32</li>
+                  <li><strong>Absolute Zero:</strong> 0 K</li>
+                </ul>
+              </div>
+            </div>
+            <div class="absolute-zero-explainer">
+              <p><strong>Note on Absolute Zero:</strong> Absolute zero represents the theoretical lowest possible temperature where thermodynamic entropy and molecular motion reach minimums. Temperatures below 0 K (-273.15 °C or -459.67 °F) do not physically exist in classical thermodynamics.</p>
+            </div>
+          </div>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <!-- Clean footer -->
+  <footer class="app-footer">
+    <p>Temperature Converter &copy; 2026 &bull; Pure HTML5, CSS3 &amp; Vanilla JavaScript</p>
+  </footer>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,893 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*sabhi elements ka default margin aur padding hata diya*/
+
+#ftco-nav {         /*navbar ka style*/
+    height: 60px;   /*navbar ki height */
+    background-color:#FFB2B2;  /*navbar ka background color*/
+    position: fixed;  /*navbar ko screen me fix kr diya */
+    bottom: 0;    /*screen ke bottom me dikhai dega*/
+    left: 0;      /*left side se start hoga */
+    width: 100%; /*poori width lega*/
+}
+
+#name {  /*navbar me name ka style*/
+    font-size: 25px; /*name ka text size*/
+    margin-right: 450px;/*right side me gap*/
+}
+
+a{          /*sabhi link (about, skill etc.) ka style*/
+    font-size: 17px;/*link text size*/
+    margin-right: 15px;/*links ke beech gap*/
+}
+
+body{     /*body ka background aur font*/
+    background-color: #FFF2D0;/*poori website ka background color*/
+    font-family:arial,sans-serif;/*font style*/
+    color: black;/*text color*/
+}
+
+.highlight{   /*highlight text (bca) ka color*/
+    color:rgb(0, 0, 255); /*(blue color*/
+    font-weight:bold;/*bold text*/
+}
+
+h1{   /*sabhi h1 headings ka size*/
+    font-size: 40px; 
+    margin-bottom: 2px;
+}
+p {
+    margin-top: 0;
+}
+
+.main-card { /*about section ka main card*/
+    background-color: #FFF2D0; /*box ka background */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 60px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 20px 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow:  0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+.about-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:60px;
+    padding-top: 0;
+    margin-top: 0;
+}
+.about-text{
+    width:55%;
+    line-height:1.8;
+    font-size:16px;
+    padding-right:20px;
+    margin-top: 5px;
+    flex:1;
+    min-width: 300px;
+    color:#333
+}
+.about-image{
+    width:35%;
+    text-align:center;
+    background:#FFF2D0;
+    padding:25px;
+    border-radius:20px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    flex:0.8;
+    min-width: 250px;
+}
+.about-image img{
+    width:60%;
+    border-radius: 10px;
+}
+.about-text p{  /*paragraph ka spacing*/
+    white-space: normal; 
+    font-size:17px;
+    line-height:1.9; /*line ke bich space*/
+    letter-spacing:0.3px;
+    margin-bottom:25px;
+    color:#333;
+    text-align:justify;
+     margin-top: 15px;
+     letter-spacing: 0.4px;
+}
+
+.container{  /*photo aur profile text wala container */
+    gap:20px; /*items ke beech gap*/
+    background-color: #FFF2D0; /*box ka background */
+    width: 34%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 30px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow:  0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.container{  /*container ka extra spacing*/
+    gap:40px;  /*items ke beech gap badhaya*/
+    margin-top:30px; /*upar se gap*/
+}
+
+.right_img{ /*right side image ka style*/
+width:220px; /*image width*/
+border-radius:10px; ;/*image ke corners round*/
+}
+
+.profile-text{  
+    font-size:18px;
+}
+
+body{
+    background-color: #FFF2D0;
+    font-family:arial,sans-serif;
+    color: black;
+}
+
+.my-skill{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow:  0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.skill-tags{
+    margin-top: 20px;
+}
+
+.skill-tags span{
+    cursor: pointer;
+    transition:0.3s;
+    background: #FFDBFD;
+    padding:8px 15px;
+    border-radius: 20px;
+    margin-right:10px;
+    font-size:14px;
+}
+
+.skill-tags span:hover{
+     background:#FFDBFD;
+    transform:scale(1.1);
+    display:inline-block;
+}
+
+.skill-box-container::-webkit-scrollbar{
+  height:8px;
+}
+
+.skill-box-container::-webkit-scrollbar-thumb{
+    background:#FFB2B2;
+    border-radius:10px;
+}
+
+.skill-box{
+    background:#FFF2D0;
+    padding:30px;
+     min-width:800px;
+    flex-shrink:0;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    scroll-snap-align:start;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.skill-box h3{
+    font-size:25px;
+    margin-bottom: 15px;
+}
+
+.skill-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+}
+
+.my-Certification{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.certificate-tags{
+    margin-top: 20px;
+}
+
+.certificate-tags span{
+    cursor: pointer;
+    transition:0.3s;
+    background: #FFDBFD;
+    padding:8px 15px;
+    border-radius: 20px;
+    margin-right:10px;
+    font-size:14px;
+}
+
+.certificate-tags span:hover{
+    background:#FFDBFD;
+    transform:scale(1.1);
+    display:inline-block;
+}
+
+.certificate-box-container::-webkit-scrollbar{
+  height:8px;
+}
+
+.certificate-box-container::-webkit-scrollbar-thumb{
+    background:#FFB2B2;
+    border-radius:10px;
+}
+
+.certificate-box{
+    background:#FFF2D0;
+    padding:30px;
+     min-width:800px;
+    flex-shrink:0;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    scroll-snap-align:start;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.certificate-box h3{
+    font-size:25px;
+    margin-bottom: 15px;
+}
+
+.certificate-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.certificate-box:hover {
+  transform: translateY(-5px);
+}
+
+.My-Board{
+    background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow:  0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+.board-section {
+  padding: 40px;
+  background: #FFDBFD;
+  color: pink;
+}
+
+.marks-container {
+  display: flex;
+  gap: 20px;           /* box ke beech space */
+  flex-wrap: wrap;
+}
+
+/* Card Design */
+.card {
+  background:#FFDBFD;
+  padding:20px;
+  border-radius: 15px;
+  width:200px;
+  text-align:center;
+  box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h1{
+    font-size:40px;
+    margin:10px 0;
+}
+
+.overview{
+    background:#FFF2D0;
+    padding:20px;
+    border-radius:15px;
+    width:250px;
+}
+
+.bar{
+    height:10px;
+    background:#FFB2B2;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.fill{
+    height:100%;
+    background:linear-gradient(to right, #E36A6A);
+    border-radius:10px;
+}
+
+.my-Interesting{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.Interesting-tags{
+    margin-top: 20px;
+}
+
+.Interesting-tags span{
+    cursor: pointer;
+    transition:0.3s;
+    background: #FFDBFD;
+    padding:8px 15px;
+    border-radius: 20px;
+    margin-right:10px;
+    font-size:14px;
+}
+
+.Interesting-tags span:hover{
+    background:#FFDBFD;
+    transform:scale(1.1);
+    display:inline-block;
+}
+
+.Interesting-container::-webkit-scrollbar{
+  height:8px;
+}
+
+.Interesting-container::-webkit-scrollbar-thumb{
+    background:#FFB2B2;
+    border-radius:10px;
+}
+
+.Interest-box{
+    background:#FFF2D0;
+    padding:30px;
+     min-width:800px;
+    flex-shrink:0;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    scroll-snap-align:start;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.Interest-box h3{
+    font-size:25px;
+    margin-bottom: 15px;
+}
+
+.Interest-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.Interest-box:hover {
+  transform: translateY(-5px);
+}
+
+.my-Profile{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+
+.two-column-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:30px;
+    margin-top:30px;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.content-box{
+    background:#FFF2D0;
+    flex:1;
+    min-width:300px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(233, 94, 94, 0.2);
+    border:1px solid #ddd;
+    transition:0.3s;
+}
+.content-box:hover{
+    transform:translateY(-5px);
+}
+.content-box h3{
+    font-size:22px;
+    color:#333;
+    margin-bottom:15px;
+}
+.content-box p,.content-box li{
+    font-size:16px;
+    line-height:1.6;
+    color:#555;
+    margin-bottom:10px;
+}
+.sub-text{
+    font-family:"Times new Roman",serif;
+    font-size:18px;
+    margin-bottom:10px;
+}
+.linkedin-link{
+    display:inline-block;
+    margin-top:15px;
+    color:#0077b5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.my-hobbies{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+.Hobbies-box{
+    background:#FFF2D0;
+    padding:30px;
+     min-width:800px;
+    flex-shrink:0;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    scroll-snap-align:start;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+}
+.Hobbies-box h3{
+    font-size:25px;
+    margin-bottom: 15px;
+}
+
+.Hobbies-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.Hobbies-box:hover {
+  transform: translateY(-5px);
+}
+.my-hometown{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.hometown-img img{
+    width:180px;
+    height:120px;
+    border-radius:10px;
+    object-fit:cover;
+}
+.hometown-text{
+    flex:1;
+    max-width:none;
+    font-size:14px;
+    line-height:1.6;
+}
+.hometown-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap:20px;
+}
+.subtitle{
+    font-size:14px;
+    margin-bottom:20px;
+    color:#FFB2B2
+}
+.hometown-box{
+    background:#FFF2D0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: flex-start;
+    gap:30px;
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:20px;
+    transition:o.3s;
+}
+.hometown-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.hometown-box:hover {
+  transform: translateY(-5px);
+}
+.my-school{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.school-img img{
+    width:180px;
+    height:120px;
+    border-radius:10px;
+    object-fit:cover;
+}
+.school-text{
+    flex:1;
+    max-width:none;
+    font-size:14px;
+    line-height:1.6;
+}
+.school-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap:20px;
+}
+.subtitle{
+    font-size:14px;
+    margin-bottom:20px;
+    color:#FFB2B2
+}
+.school-box{
+    background:#FFF2D0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: flex-start;
+    gap:30px;
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:20px;
+    transition:o.3s;
+}
+.school-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.school-box:hover {
+  transform: translateY(-5px);
+}
+.my-college{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.college-img img{
+    width:180px;
+    height:120px;
+    border-radius:10px;
+    object-fit:cover;
+}
+.college-text{
+    flex:1;
+    max-width:none;
+    font-size:14px;
+    line-height:1.6;
+}
+.college-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap:20px;
+}
+.subtitle{
+    font-size:14px;
+    margin-bottom:20px;
+    color:#FFB2B2
+}
+.college-box{
+    background:#FFF2D0;
+    padding:30px;  
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: flex-start;
+    gap:30px;
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:20px;
+    transition:o.3s;
+}
+.college-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.college-box:hover {
+  transform: translateY(-5px);
+}
+.my-university{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+
+.university-img img{
+    width:180px;
+    height:120px;
+    border-radius:10px;
+    object-fit:cover;
+}
+.university-text{
+    flex:1;
+    max-width:none;
+    font-size:14px;
+    line-height:1.6;
+}
+.university-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    gap:20px;
+}
+.subtitle{
+    font-size:14px;
+    margin-bottom:20px;
+    color:#FFB2B2
+}
+.university-box{
+    background:#FFF2D0;
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: flex-start;
+    gap:30px;
+    width:100%;
+    box-sizing:border-box;
+    margin-bottom:20px;
+    transition:o.3s;
+}
+.university-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.university-box:hover {
+  transform: translateY(-5px);
+}
+.my-motivate{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+.motivate-container::-webkit-scrollbar{
+  height:8px;
+}
+
+.motivate-container::-webkit-scrollbar-thumb{
+    background:#FFB2B2;
+    border-radius:10px;
+}
+
+.motivate-box{
+    background:#FFF2D0;
+    padding:30px;
+     min-width:800px;
+    flex-shrink:0;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    scroll-snap-align:start;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.motivate-box h3{
+    font-size:25px;
+    margin-bottom: 15px;
+}
+.motivate-box h4{
+    font-size:20px;
+    margin-bottom: 10px;
+}
+.motivate-box p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.motivate-box:hover {
+  transform: translateY(-5px);
+}
+.my-contact{
+     background-color: #FFF2D0; /*box ka background color */
+    width: 80%; /*box kitna chauuda hoga*/
+    margin: 40px auto; /*navbar se niche aur screen ke beech mein lane ke liye*/
+    padding: 40px; /* box ke andar text aur border ke beech ki jagah*/
+    border-radius: 20px; /*kinare round karne ke liye */
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4); /*halka shadow jo box ko utha hua dikhaye*/
+    border: 1px solid #ddd; /*halka border*/
+}
+.contact-container::-webkit-scrollbar{
+  height:8px;
+}
+
+.contact-container::-webkit-scrollbar-thumb{
+    background:#FFB2B2;
+    border-radius:10px;
+}
+.contact-box{
+    background:#FFF2D0;
+    padding:30px;
+     min-width:800px;
+    flex-shrink:0;
+    border-radius:15px;
+    box-shadow: 0 10px 25px rgba(233, 94, 94, 0.4);
+    scroll-snap-align:start;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    justify-content: center;
+}
+.contact-box:hover {
+  transform: translateY(-5px);
+}
+.contact-item{
+    margin-bottom:10px;
+    font-family:Arial, sans-serif;
+    color:black;
+}
+.contact-item strong{
+    font-weight:700;
+    margin-right:5px;
+}
+.contact-items span{
+    font-weight:400;
+    opacity:0.9;
+}
+@media (max-width: 768px) {
+
+    /* About section */
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+
+    /* Navbar fix */
+    #ftco-nav {
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #name {
+        margin-right: 0;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* Skill boxes */
+    .skill-box {
+        min-width: 100%;
+    }
+
+    /* Certificate boxes */
+    .certificate-box {
+        min-width: 100%;
+    }
+
+    /* Interesting boxes */
+    .Interest-box {
+        min-width: 100%;
+    }
+
+    /* Motivate boxes */
+    .motivate-box {
+        min-width: 100%;
+    }
+
+    /* Contact box */
+    .contact-box {
+        min-width: 100%;
+    }
+
+    /* Cards */
+    .marks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* School / college / hometown */
+    .school-box,
+    .college-box,
+    .university-box,
+    .hometown-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Images */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
